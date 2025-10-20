@@ -1,5 +1,5 @@
 use log::info;
-use minigrep::{init, search};
+use minigrep::{init, search, search_case_insensitive};
 
 #[test]
 fn fn_one_result_test01() {
