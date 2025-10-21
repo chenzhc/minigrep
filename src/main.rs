@@ -5,10 +5,10 @@ use std::{env,  process};
 fn main() {
     init();
 
-    let args: Vec<String> = env::args().collect();
-    info!("{:?}", args);
+    // let args: Vec<String> = env::args().collect();
+    // info!("{:?}", args);
 
-    let config = Config::new(&args).unwrap_or_else(|err| {
+    let config = Config::new(env::args()).unwrap_or_else(|err| {
         info!("Problem parsing arguments: {}", err);
         process::exit(1);
     });
